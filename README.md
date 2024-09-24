@@ -1,32 +1,8 @@
 ## Cactus
 
+This is a stripped down version of cactus. Trying to avoid JavaScript and keep things simple and clean.
+
 A hugo theme for personal blog. Fork from hexo theme [cactus](https://github.com/probberechts/hexo-theme-cactus) created by @probberechts.
-
-[Live demo on github pages](https://www.takuzen.me/hugo-theme-cactus/).
-
-Some works are still in progress. See [TODOS](#todos) below.
-
-## Install
-
-1. clone cactus to your hugo site's `themes` folder.
-```
-git clone https://github.com/monkeyWzr/hugo-theme-cactus.git themes/cactus
-```
-
-2. change your theme to cactus in your site config
-```toml
-# config.toml
-
-theme = "cactus"
-```
-
-3. config your site. See [Config] or a [complete config sample](exampleSite/config.toml)
-4. test your site
-```
-hugo server
-```
-
-5. publish your site in your prefered way. See hugo's doc: [Hosting & Deployment](https://gohugo.io/hosting-and-deployment/)
 
 ## Config
 
@@ -37,16 +13,6 @@ hugo server
 
   colortheme = "white" # dark, light, white, or classic
 ```
-
-### Custom CSS
-
-```toml
-[params]
-  css = ["css/custom.css"]
-```
-
-You can add multiple custom stylesheets which will be loaded after the main theme css.
-For example, the above line will load the CSS-file placed at `/static/css/custom.css`.
 
 ### Navigation
 
@@ -186,31 +152,6 @@ TODO: Customizable copyright year
 copyright = "Zeran Wu" # cactus theme will use site title if copyright is not set
 ```
 
-### Comments
-
-Comments is disabled by default. Enable comments in your `.Site.Params`.
-```toml
-[params]
-  [params.comments]
-    enabled = true
-    # engine = "disqus" # in progress
-```
-
-You can also enable/disable comments per post. in your posts' front matter, add:
-```yaml
-comments: true
-```
-
-The site config is ignored when `comments` option exists in front matter.
-
-The default engine is disqus. **By now only disqus is supported in cactus.** I will add more options sooner or later. See [Comments Alternatives](https://gohugo.io/content-management/comments/#comments-alternatives)
-
-Before using disqus, you need to register and get your [disqus shortname](https://help.disqus.com/en/articles/1717111-what-s-a-shortname). Assign your shortname in `.Site.disqusShortname`, or cactus will use `.Site.Title` by default.
-
-```
-disqusShortname = "wzr" # cactus will use site title if not set
-```
-
 ### highlight
 
 Use hugo's built-in [syntax highlighting](https://gohugo.io/getting-started/configuration-markup#highlight).
@@ -229,21 +170,6 @@ default config:
     noClasses = true
     style = "monokai"
     tabWidth = 4
-```
-
-### Analytics
-
-Cactus uses hugo's bulit in analytics templates. Check [hugo's documents](https://gohugo.io/templates/internal#google-analytics) for details.
-
-Set you tracking id in your site config.
-```toml
-googleAnalytics = "UA-XXXXXXXX-XX" # or G-XXXXXXXX if you are using Google Analytics v4 (gtag.js)
-```
-
-If you are using Google Analytics v3 (analytics.js), you can switch to asynchronous tracking by set `params.googleAnalyticsAsync` to `true`.
-```toml
-[params]
-googleAnalyticsAsync = true # not required
 ```
 
 ### RSS

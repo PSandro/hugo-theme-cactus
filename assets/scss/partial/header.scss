@@ -13,7 +13,6 @@
     font-size: 1.5rem;
     line-height: 2rem;
 
-    @include antialias();
   }
   a {
     background: none;
@@ -61,9 +60,6 @@
         border-color: $color-accent-1;
         vertical-align: middle;
       }
-      .icon {
-        display: none;
-      }
       li:last-child {
         margin-right: 0;
         border-right: 0;
@@ -99,14 +95,7 @@
         background: none;
       }
       li {
-        display: none;
         border-right: 0;
-      }
-      li.icon {
-        position: absolute;
-        top: 77px;
-        right: 1rem;
-        display: inline-block;
       }
     }
     ul.responsive {
@@ -114,7 +103,7 @@
         display: block;
       }
     }
-    li:not(:first-child) {
+    li {
       padding-top: 1rem;
       padding-left: $logo-width + 20px;
       font-size: 1rem;

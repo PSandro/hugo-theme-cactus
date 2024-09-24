@@ -1,7 +1,4 @@
-@mixin antialias() {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
+
 @mixin hyphens($value) {
   hyphens: $value;
   -moz-hyphens: $value;

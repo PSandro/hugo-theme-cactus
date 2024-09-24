@@ -6,9 +6,6 @@
   <header id="header">
     <div id="nav">
       <ul>
-        <li class="icon">
-          <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
-        </li>
         {{ range .Site.Menus.main }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
@@ -16,16 +13,12 @@
     </div>
   </header>
 
-
   <div id="header-post">
-    <span id="menu">
-      <br/>
-      {{ if not .Site.Params.tocInline }}
-      <div id="toc">
-        {{ .TableOfContents }}
-      </div>
-      {{ end }}
-    </span>
+    {{ if not .Site.Params.tocInline }}
+    <div id="toc">
+      {{ .TableOfContents }}
+    </div>
+    {{ end }}
   </div>
 
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
