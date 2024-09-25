@@ -8,6 +8,9 @@
         {{ range .Site.Menus.main }} 
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
+        {{ if .Site.Params.imprintUrl }}
+        <li><a href="{{ .Site.Params.imprintUrl }}">Imprint</a></li>
+        {{ end }}
       </ul>
     </nav>
   </div>
